@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Rapadura pura de cana do Sítio Catolé, Lavras da Mangabeira (CE). Atacado, comércio e pré-venda da próxima safra.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Rapadura Sítio Catolé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: cinematic aerial slideshow hero → datasheet → split process with melado → aerial parallax band → products → real-stock strip → buyers → order console */
+:root{
+  --night:#0E0905; --ember:#1A110A; --panel:#20150C; --line:#3B2817;
+  --cream:#F6E7CF; --dim:#B49B7D; --amber:#F2A33A; --gold:#FFD27A; --cane:#9BC25B;
+  --display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --serif:"Instrument Serif","Georgia",serif;
+  --mono:"JetBrains Mono",ui-monospace,"Consolas",monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--cream);font-family:var(--display);font-size:17px;line-height:1.55;overflow-x:hidden}
+a{color:var(--gold)} p{margin:0} img{display:block;max-width:100%}
+h1,h2,h3{margin:0;font-weight:800;line-height:.95;letter-spacing:-.02em;text-wrap:balance}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+em.s{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--gold);letter-spacing:0}
+
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;padding-block:16px;transition:background .3s}
+nav.solid{background:rgba(14,9,5,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;font-size:18px;color:var(--cream);text-decoration:none;display:flex;gap:10px;align-items:center}
+.brand i{width:12px;height:12px;border-radius:3px;background:var(--amber);box-shadow:0 0 14px var(--amber)}
+.links{display:flex;gap:22px;align-items:center}
+.links a{color:var(--cream);text-decoration:none;font-size:15px;opacity:.85}
+.links a:hover{opacity:1}
+.navcta{font:600 13px var(--mono)!important;letter-spacing:.06em;text-transform:uppercase;color:var(--night)!important;background:var(--gold);padding:10px 16px;border-radius:999px;opacity:1!important}
+
+/* hero slideshow */
+.hero{position:relative;height:min(100svh,940px);min-height:620px;overflow:hidden;isolation:isolate}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+@media (prefers-reduced-motion:no-preference){
+  .slide.on img{animation:kb var(--d,7s) linear forwards}
+  .slide:nth-child(1) img{--o:center 60%} .slide:nth-child(2) img{--o:30% 40%} .slide:nth-child(3) img{--o:70% 50%} .slide:nth-child(4) img{--o:50% 50%}
+  @keyframes kb{from{transform:scale(1.18) translate3d(-1.5%,1%,0)}to{transform:scale(1.04) translate3d(1.5%,-1%,0)}}
+}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(14,9,5,.55) 0%,rgba(14,9,5,0) 28%,rgba(14,9,5,.15) 55%,rgba(14,9,5,.92) 100%),
+             radial-gradient(80% 60% at 20% 90%,rgba(14,9,5,.6),transparent 70%)}
+.grain{position:absolute;inset:-50%;z-index:2;pointer-events:none;opacity:.08;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.hero .content{position:absolute;inset:auto 0 0 0;z-index:3;padding-block:0 40px}
+.hero h1{font-size:clamp(60px,13.5vw,196px);letter-spacing:-.045em;line-height:.82}
+.hero h1 em{display:block;font-size:.4em;margin-top:.14em;line-height:1}
+.herorow{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:26px}
+.lead{max-width:44ch;font-size:19px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font:700 16px var(--display);border-radius:999px;padding:15px 24px;text-decoration:none;display:inline-flex;gap:10px;align-items:center;border:1.5px solid var(--gold);color:var(--night);background:var(--gold);cursor:pointer}
+.btn.ghost{background:rgba(14,9,5,.35);color:var(--cream);border-color:rgba(246,231,207,.5);backdrop-filter:blur(6px)}
+.btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
+.ticker{display:flex;gap:16px;margin-top:34px;border-top:1px solid rgba(246,231,207,.18);padding-top:16px}
+.tick{flex:1;min-width:0;background:none;border:0;padding:0;text-align:left;color:var(--cream);cursor:pointer;display:grid;gap:8px}
+.tick .bar{height:2px;background:rgba(246,231,207,.2);overflow:hidden}
+.tick .bar i{display:block;height:100%;width:0;background:var(--gold)}
+.tick.on .bar i{width:100%;transition:width var(--d,7s) linear}
+.tick span{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tick.on span{color:var(--cream)}
+
+/* datasheet */
+.sheet{border-block:1px solid var(--line);background:var(--ember)}
+.sheet .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.cell{padding:28px 20px;border-left:1px solid var(--line);display:grid;gap:6px;min-width:0}
+.cell:first-child{border-left:0}
+.cell b{font-size:clamp(34px,4.6vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.cell b small{font-size:.4em;color:var(--amber);font-weight:700;margin-left:4px}
+
+section{padding-block:104px}
+.head{display:grid;gap:14px;margin-bottom:48px;max-width:780px}
+.head h2{font-size:clamp(40px,6.4vw,84px)}
+.head p{color:var(--dim);font-size:19px;max-width:52ch}
+
+/* process split */
+.split{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center}
+.frame{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.2s ease}
+.frame:hover img{transform:scale(1.12)}
+.frame .tag{position:absolute;left:16px;bottom:16px;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:rgba(14,9,5,.7);backdrop-filter:blur(6px);padding:8px 12px;border-radius:999px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.steps .n{font:600 14px var(--mono);color:var(--amber)}
+.steps h3{font-size:26px;letter-spacing:-.01em}
+.steps p{color:var(--dim);font-size:16px;margin-top:4px}
+
+/* parallax band */
+.band{position:relative;height:min(78vh,720px);min-height:440px;overflow:hidden;display:grid;align-items:end}
+.band img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--night) 0%,rgba(14,9,5,0) 22%,rgba(14,9,5,0) 55%,var(--night) 100%)}
+.band .wrap{position:relative;z-index:1;padding-block:0 56px;width:100%}
+.band h2{font-size:clamp(44px,8vw,120px);max-width:12ch}
+.band .mono{color:var(--cream);margin-bottom:12px;display:block}
+
+/* products */
+.prods{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+.card{border:1px solid var(--line);border-radius:22px;background:var(--ember);display:grid;align-content:start;min-width:0;overflow:hidden}
+.card .pic{aspect-ratio:16/9;overflow:hidden}
+.card .pic img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.card:hover .pic img{transform:scale(1.06)}
+.card .body{padding:28px;display:grid;gap:14px}
+.card h3{font-size:clamp(30px,3.6vw,44px)}
+.card p{color:var(--dim)}
+.chip{justify-self:start;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid currentColor}
+.chip.live{color:var(--cane)} .chip.soon{color:var(--dim)}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-family:var(--mono);font-size:14px;margin:0}
+.specs dt{color:var(--dim)} .specs dd{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.tags li{border:1px dashed var(--line);border-radius:999px;padding:6px 14px;font-size:15px}
+
+/* real stock strip */
+.real{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:20px;align-items:stretch}
+.real figure{margin:0;border-radius:22px;overflow:hidden;position:relative;min-height:340px}
+.real figure img{width:100%;height:100%;object-fit:cover}
+.real figcaption{position:absolute;left:14px;bottom:14px;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:rgba(14,9,5,.75);padding:7px 11px;border-radius:999px}
+.real .txt{border:1px solid var(--line);border-radius:22px;padding:32px;display:grid;gap:16px;align-content:end;background:radial-gradient(90% 90% at 100% 0%,rgba(242,163,58,.2),transparent 60%),var(--panel)}
+.real .txt h3{font-size:clamp(30px,3.6vw,46px)}
+.real .txt p{color:var(--dim)}
+
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:22px;background:var(--ember)}
+.track{display:flex;gap:48px;width:max-content;font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.track span{display:flex;gap:48px;align-items:center}
+.track i{width:10px;height:10px;border-radius:50%;background:var(--amber);display:inline-block}
+@media (prefers-reduced-motion:no-preference){.track{animation:mq 32s linear infinite}@keyframes mq{to{transform:translateX(-50%)}}}
+
+/* buyers */
+.buyers{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.buyer{padding:28px 24px 8px;display:grid;gap:10px;align-content:start;border-right:1px solid var(--line);min-width:0}
+.buyer:first-child{padding-left:0}.buyer:last-child{border-right:0}
+.buyer h3{font-size:28px}.buyer p{color:var(--dim);font-size:16px}
+
+/* console */
+.console{border:1px solid var(--line);border-radius:22px;background:var(--ember);display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.console form{padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
+.field{display:grid;gap:6px;min-width:0}.full{grid-column:1/-1}
+label,.lbl{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+input,select,textarea{font:16px var(--display);color:var(--cream);background:var(--night);border:1px solid var(--line);border-radius:10px;padding:13px;width:100%}
+textarea{min-height:76px;resize:vertical}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.checks label{font:500 15px var(--display);letter-spacing:0;text-transform:none;color:var(--cream);display:flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;background:var(--night)}
+.checks input{width:auto;accent-color:var(--amber)}
+.preview{background:#0A0603;padding:32px;display:grid;gap:16px;align-content:start;border-left:1px solid var(--line);min-width:0}
+.bubble{background:#1F3B1F;color:#EAF5DF;border-radius:14px 14px 4px 14px;padding:16px;white-space:pre-wrap;font-size:15px;justify-self:end;max-width:100%;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.status{font:13px var(--mono);color:var(--dim)}
+
+footer{border-top:1px solid var(--line);padding-block:40px 48px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:end}
+footer .big{font-size:clamp(40px,7vw,92px);font-weight:800;letter-spacing:-.04em;line-height:.9}
+.foot{display:grid;gap:6px;color:var(--dim);font-size:15px}
+.credit{font:12px var(--mono);color:var(--dim);margin-top:24px;opacity:.7}
+
+/* reveal (visible at rest; only enhances) */
+@media (prefers-reduced-motion:no-preference){.rv{transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .9s}.rv.pre{transform:translateY(24px);opacity:.25}}
+
+@media (max-width:900px){
+  .links a:not(.navcta){display:none}
+  .sheet .wrap{grid-template-columns:1fr 1fr}.cell:nth-child(3){border-left:0}.cell:nth-child(n+3){border-top:1px solid var(--line)}
+  .split,.prods,.console{grid-template-columns:1fr}.frame{aspect-ratio:4/3}
+  .real{grid-template-columns:1fr 1fr}.real .txt{grid-column:1/-1}
+  .preview{border-left:0;border-top:1px solid var(--line)}
+  .buyers{grid-template-columns:1fr}.buyer{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
+  .ticker{gap:10px}
+}
+@media (max-width:520px){.console form{grid-template-columns:1fr;padding:22px}.preview{padding:22px}.card .body{padding:22px}.real{grid-template-columns:1fr}.real figure{min-height:280px}.tick span{font-size:10.5px}}
+</style>
+
+<nav id="nav"><div class="wrap">
+  <a class="brand" href="#topo"><i></i>Sítio Catolé</a>
+  <div class="links">
+    <a href="#processo">Processo</a><a href="#produtos">Produtos</a><a href="#reserva">Pré-venda</a>
+    <a class="navcta wa-link" href="#reserva" data-text="Olá! Vi o site do Sítio Catolé e quero a tabela de preços da rapadura.">Pedir tabela</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="topo">
+  <div class="slide on"><img src="img/aereo-canavial.jpg" alt="Vista aérea de canavial no sertão ao entardecer"></div>
+  <div class="slide"><img src="img/aereo-sitio.jpg" alt="Vista aérea de sítio com engenho e canavial no interior do Ceará"></div>
+  <div class="slide"><img src="img/rapaduras-fileiras.jpg" alt="Rapaduras alinhadas vistas de cima"></div>
+  <div class="slide"><img src="img/canavial-por-do-sol.jpg" alt="Canavial contra o pôr do sol"></div>
+  <div class="grain"></div>
+  <div class="content"><div class="wrap">
+    <p class="mono" style="color:var(--gold)">Lavras da Mangabeira · Ceará · Direto do produtor</p>
+    <h1>Rapadura<em class="s">do Sítio Catolé</em></h1>
+    <div class="herorow">
+      <p class="lead">Caldo de cana apurado no tacho até virar barra. Sem aditivo, sem atalho. Pronta entrega em cargas de 100 unidades.</p>
+      <div class="ctas">
+        <a class="btn wa-link" href="#reserva" data-text="Olá! Vi o site do Sítio Catolé e quero fazer um pedido de rapadura.">Fazer pedido</a>
+        <a class="btn ghost" href="#reserva">Reservar próxima safra</a>
+      </div>
+    </div>
+    <div class="ticker" role="tablist" aria-label="Imagens">
+      <button class="tick on" role="tab" aria-selected="true"><div class="bar"><i></i></div><span>01 · O canavial</span></button>
+      <button class="tick" role="tab" aria-selected="false"><div class="bar"><i></i></div><span>02 · O sítio</span></button>
+      <button class="tick" role="tab" aria-selected="false"><div class="bar"><i></i></div><span>03 · A rapadura</span></button>
+      <button class="tick" role="tab" aria-selected="false"><div class="bar"><i></i></div><span>04 · A cana</span></button>
+    </div>
+  </div></div>
+</header>
+
+<div class="sheet"><div class="wrap">
+  <div class="cell"><span class="mono">Peso por barra</span><b>850<small>g</small></b></div>
+  <div class="cell"><span class="mono">Carga</span><b>100<small>un</small></b></div>
+  <div class="cell"><span class="mono">Ingrediente</span><b>1<small>cana</small></b></div>
+  <div class="cell"><span class="mono">Em estoque</span><b>16,5<small>cargas</small></b></div>
+</div></div>
+
+<section id="processo"><div class="wrap split">
+  <div class="frame rv"><img src="img/melado-tacho.jpg" alt="Melado dourado sendo despejado no tacho" loading="lazy"><span class="tag">Etapa 04 · O tacho</span></div>
+  <div>
+    <div class="head" style="margin-bottom:28px"><span class="mono">Da cana à barra</span><h2>Seis etapas. <em class="s">Nenhum atalho.</em></h2></div>
+    <ol class="steps">
+      <li class="rv"><span class="n">01</span><div><h3>Cana</h3><p>Colhida madura no canavial do sítio.</p></div></li>
+      <li class="rv"><span class="n">02</span><div><h3>Moenda</h3><p>A cana é moída e o caldo sai na hora.</p></div></li>
+      <li class="rv"><span class="n">03</span><div><h3>Caldo</h3><p>Coado para tirar bagaço e impurezas.</p></div></li>
+      <li class="rv"><span class="n">04</span><div><h3>Tacho</h3><p>Fervido e mexido até engrossar em melado.</p></div></li>
+      <li class="rv"><span class="n">05</span><div><h3>Ponto</h3><p>O mestre do engenho decide o ponto certo.</p></div></li>
+      <li class="rv"><span class="n">06</span><div><h3>Forma</h3><p>Esfria na forma e vira a barra de 850 g.</p></div></li>
+    </ol>
+  </div>
+</div></section>
+
+<div class="band" id="band">
+  <img src="img/aereo-sitio.jpg" alt="Vista aérea do sítio com engenho e canavial" loading="lazy">
+  <div class="wrap"><span class="mono">Próxima safra</span><h2>Engenho próprio. <em class="s">Tudo da cana fica no sítio.</em></h2></div>
+</div>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Rapadura <i></i> Mel de engenho <i></i> Alfenim <i></i> Batida <i></i> Açúcar mascavo <i></i> Rapadurinha <i></i></span>
+  <span>Rapadura <i></i> Mel de engenho <i></i> Alfenim <i></i> Batida <i></i> Açúcar mascavo <i></i> Rapadurinha <i></i></span>
+</div></div>
+
+<section id="produtos"><div class="wrap">
+  <div class="head"><span class="mono">Produtos</span><h2>Hoje e <em class="s">na próxima safra</em></h2></div>
+  <div class="prods">
+    <article class="card rv">
+      <div class="pic"><img src="img/rapadura-close.jpg" alt="Rapadura quebrada em close" loading="lazy"></div>
+      <div class="body">
+        <span class="chip live">● Pronta entrega</span>
+        <h3>Rapadura tradicional</h3>
+        <p>Barra firme, cor de caramelo escuro, doce de cana sem nada acrescentado.</p>
+        <dl class="specs"><dt>Peso</dt><dd>850 g por barra</dd><dt>Venda</dt><dd>carga (100 un) ou caixa</dd><dt>Retirada</dt><dd>no sítio ou entrega na região</dd></dl>
+      </div>
+    </article>
+    <article class="card rv">
+      <div class="pic"><img src="img/canavial-por-do-sol.jpg" alt="Canavial ao pôr do sol" loading="lazy"></div>
+      <div class="body">
+        <span class="chip soon">○ Próxima safra · engenho próprio</span>
+        <h3>Linha completa</h3>
+        <p>Com engenho próprio, tudo o que a cana dá chega até você.</p>
+        <ul class="tags"><li>Mel de engenho</li><li>Alfenim</li><li>Batida</li><li>Açúcar mascavo</li><li>Rapadurinha embalada</li></ul>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="real">
+    <figure class="rv"><img src="img/fileiras.jpg" alt="Rapaduras do estoque atual do Sítio Catolé"><figcaption>Estoque atual · foto real</figcaption></figure>
+    <figure class="rv"><img src="img/coluna.jpg" alt="Fileira de rapaduras do estoque atual"><figcaption>Safra 2026</figcaption></figure>
+    <div class="txt rv"><span class="mono">Sem filtro</span><h3>Essa é a rapadura <em class="s">que vai até você.</em></h3><p>16,5 cargas prontas para entrega, da safra deste ano. Barra de 850 g, cortada e seca no sítio.</p>
+      <a class="btn wa-link" style="justify-self:start" href="#reserva" data-text="Olá! Vi o site do Sítio Catolé e quero saber o preço da carga de rapadura.">Quero uma carga</a></div>
+  </div>
+</div></section>
+
+<section id="compradores" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="mono">Para quem vendemos</span><h2>Do atacado <em class="s">à mesa</em></h2></div>
+  <div class="buyers">
+    <div class="buyer rv"><span class="mono">01 · Volume</span><h3>Atacado e distribuidoras</h3><p>Carga fechada com preço de atacado para CEASA, distribuidoras e lojas de produtos regionais.</p></div>
+    <div class="buyer rv"><span class="mono">02 · Prateleira</span><h3>Mercadinhos e empórios</h3><p>Caixa menor para testar na loja. Quando acabar, repomos.</p></div>
+    <div class="buyer rv"><span class="mono">03 · Matéria-prima</span><h3>Indústria</h3><p>Para doces, pé-de-moleque, granola, cachaça e batidas. Volume sob consulta.</p></div>
+  </div>
+</div></section>
+
+<section id="reserva" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="mono">Pedido e pré-venda</span><h2>Monte seu pedido. <em class="s">A gente responde no WhatsApp.</em></h2>
+    <p>Quem reserva a próxima safra agora tem prioridade de entrega e preço combinado antes da colheita.</p></div>
+  <div class="console">
+    <form id="form" novalidate>
+      <div class="field"><label for="nome">Nome</label><input id="nome" autocomplete="name"></div>
+      <div class="field"><label for="cidade">Cidade / UF</label><input id="cidade" placeholder="Ex.: Iguatu / CE"></div>
+      <div class="field"><label for="tipo">Compro como</label><select id="tipo"><option>Atacado / distribuidora</option><option>Mercadinho / empório / padaria</option><option>Indústria</option><option>Consumidor final</option></select></div>
+      <div class="field"><label for="qtd">Quantidade</label><select id="qtd"><option>1 caixa</option><option>1 carga (100 un)</option><option>2 a 5 cargas</option><option>Mais de 5 cargas</option></select></div>
+      <div class="field"><label for="quando">Quando</label><select id="quando"><option>Pronta entrega</option><option>Reserva da próxima safra</option></select></div>
+      <div class="field full"><span class="lbl" id="plbl">Produtos</span>
+        <div class="checks" role="group" aria-labelledby="plbl">
+          <label><input type="checkbox" id="p1" value="Rapadura" checked> Rapadura</label>
+          <label><input type="checkbox" id="p2" value="Mel de engenho"> Mel de engenho</label>
+          <label><input type="checkbox" id="p3" value="Alfenim"> Alfenim</label>
+          <label><input type="checkbox" id="p4" value="Batida"> Batida</label>
+          <label><input type="checkbox" id="p5" value="Açúcar mascavo"> Açúcar mascavo</label>
+        </div></div>
+      <div class="field full"><label for="obs">Observação</label><textarea id="obs"></textarea></div>
+    </form>
+    <div class="preview">
+      <span class="mono">Prévia da mensagem</span>
+      <p class="bubble" id="msg" aria-live="polite"></p>
+      <div class="ctas"><a class="btn" id="send" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a><button class="btn ghost" type="button" id="copy">Copiar</button></div>
+      <p class="status" id="status"></p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <p class="big">Sítio <em class="s">Catolé</em></p>
+  <div class="foot">
+    <span>Zona rural de Lavras da Mangabeira, Ceará</span>
+    <span>WhatsApp (88) 9 9226-8816</span>
+    <a href="https://maps.app.goo.gl/zzPKMBAPc4sxzGzi6" target="_blank" rel="noopener">Ver localização no Google Maps</a>
+  </div>
+</div>
+<div class="wrap"><p class="credit">Imagens de paisagem e produto ilustrativas. Fotos do estoque são reais.</p></div></footer>
+
+<script>
+// slideshow
+(function(){
+  const slides=[...document.querySelectorAll('.slide')], ticks=[...document.querySelectorAll('.tick')];
+  const D=7000, still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.style.setProperty('--d',D/1000+'s');
+  let i=0,timer;
+  function go(n){
+    slides[i].classList.remove('on');ticks[i].classList.remove('on');ticks[i].setAttribute('aria-selected','false');
+    i=(n+slides.length)%slides.length;
+    const img=slides[i].querySelector('img');img.style.animation='none';void img.offsetWidth;img.style.animation='';
+    slides[i].classList.add('on');
+    const t=ticks[i];t.classList.remove('on');void t.offsetWidth;t.classList.add('on');t.setAttribute('aria-selected','true');
+    clearTimeout(timer); if(!still) timer=setTimeout(()=>go(i+1),D);
+  }
+  ticks.forEach((t,n)=>t.addEventListener('click',()=>go(n)));
+  if(!still) timer=setTimeout(()=>go(1),D);
+})();
+// nav background, parallax, reveal
+(function(){
+  const nav=document.getElementById('nav'), band=document.querySelector('#band img');
+  const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function onScroll(){
+    nav.classList.toggle('solid',scrollY>innerHeight*.6);
+    if(!still&&band){const r=band.parentElement.getBoundingClientRect();const p=(r.top+r.height/2-innerHeight/2)/innerHeight;band.style.transform=`translate3d(0,${p*-8}%,0)`;}
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if(!still&&'IntersectionObserver' in window){
+    const els=[...document.querySelectorAll('.rv')].filter(e=>e.getBoundingClientRect().top>innerHeight);
+    els.forEach(e=>e.classList.add('pre'));
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}}),{rootMargin:'0px 0px -10% 0px'});
+    els.forEach(e=>io.observe(e));
+  }
+})();
+// WhatsApp order builder
+const WHATSAPP="5588992268816";
+const $=s=>document.querySelector(s);
+const wa=t=>"https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t);
+document.querySelectorAll(".wa-link").forEach(a=>{a.href=wa(a.dataset.text);a.target="_blank";a.rel="noopener";});
+function build(){
+  const v=id=>$(id).value.trim();
+  const prods=[...document.querySelectorAll(".checks input:checked")].map(i=>i.value);
+  let t=`Olá! Quero fazer um pedido ao Sítio Catolé.\n\nNome: ${v("#nome")||"—"}\nCidade: ${v("#cidade")||"—"}\nCompro como: ${v("#tipo")}\nQuantidade: ${v("#qtd")}\nQuando: ${v("#quando")}\nProdutos: ${prods.join(", ")||"—"}`;
+  if(v("#obs")) t+=`\nObservação: ${v("#obs")}`;
+  $("#msg").textContent=t;
+  const ok=v("#nome")&&v("#cidade"), s=$("#send");
+  if(ok){s.href=wa(t);s.removeAttribute("aria-disabled");$("#status").textContent="Pronto para enviar.";}
+  else{s.href="#";s.setAttribute("aria-disabled","true");$("#status").textContent="Preencha nome e cidade para enviar.";}
+  return t;
+}
+$("#form").addEventListener("input",build);$("#form").addEventListener("change",build);
+$("#form").addEventListener("submit",e=>e.preventDefault());
+$("#copy").addEventListener("click",()=>{const t=build();
+  navigator.clipboard?.writeText(t).then(()=>{$("#status").textContent="Mensagem copiada.";}).catch(()=>{
+    const r=document.createRange();r.selectNodeContents($("#msg"));const s=getSelection();s.removeAllRanges();s.addRange(r);
+    $("#status").textContent="Mensagem selecionada. Use Copiar do seu aparelho.";});});
+build();
+</script>
+
+</body>
+</html>
